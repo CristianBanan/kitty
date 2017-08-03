@@ -1,0 +1,17 @@
+﻿@model KittyUI.Models.Locations
+
+@{
+    ViewBag.Title = "IntroduceCity";
+}
+
+@using (Html.BeginForm("Locations", "IntoduceCity", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4>Introduce new department.</h4>
+    <hr />
+    @Html.TextBoxFor(m => m.Departments, new { @class = "form-control", list = "Departments", id = "txtLang" })
+    <datalist id="Departments">
+       
+
+
+        }

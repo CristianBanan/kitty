@@ -1,0 +1,9 @@
+﻿@model KittyUI.Models.ListLocationsViewModel
+@{
+    ViewBag.Title = "ListLocations";
+}
+
+<h2>ListLocations</h2>
+
+@Html.DropDownListFor(m => m.locs, new SelectList(Model.locs, "location_id", "city"), " ")
+
