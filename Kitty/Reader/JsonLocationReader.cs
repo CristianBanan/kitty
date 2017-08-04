@@ -28,7 +28,7 @@ namespace Kitty.Reader
 
                 foreach (string city in array.Romania)
                 {
-                    yield return city;
+                    yield return city;   
                 }
             }         
 

@@ -12,7 +12,7 @@ namespace Kitty.DB
     {
         public DbSet<Employee> employees { get; set; }
 
-        public EmployeeDbContext():base("DefaultConnection")
+        public EmployeeDbContext():base("KittyConnection")
         {
            
         }

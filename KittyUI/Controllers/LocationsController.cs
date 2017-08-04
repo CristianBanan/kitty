@@ -1,4 +1,6 @@
-﻿using Kitty.DB;
+﻿using Kitty;
+using Kitty.DB;
+using Kitty.Repositories;
 using KittyUI.Models;
 using System;
 using System.Collections.Generic;
@@ -11,17 +13,25 @@ namespace KittyUI.Controllers
     public class LocationsController : Controller
     {
         // GET: Locations
-       
-            private LocationDbContext db = new LocationDbContext();
-
             [HttpGet]
             public ActionResult ListLocations()
             {
-                var departments = db.locations.ToList();
+                var locationRepo = new LocationRepository();
 
-                var viewModel = new ListLocationsViewModel { locs = departments };
+                var viewModel = new ListLocationsViewModel { locs = locationRepo.GetLocations().ToList() };
 
                 return View(viewModel);
             }
+
+           public ActionResult AddDepartment(Location location)
+        {
+            var locationRepo = new LocationRepository();
+
+            locationRepo.Add(location);
+
+            ViewBag.Error = false;
+
+            return View();
         }
+   }
  }

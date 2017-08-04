@@ -9,5 +9,7 @@ namespace KittyUI.Models
     public class ListLocationsViewModel
     {
         public List<Location> locs { get; set; }
+
+        public Location AddCity { get; set; }
     }
 }

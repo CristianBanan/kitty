@@ -12,7 +12,7 @@ namespace Kitty.DB
     {
         public DbSet<Office> offices { get; set; }
 
-        public OfficeDbContext() : base("DefaultConnection")
+        public OfficeDbContext() : base("KittyConnection")
         {
 
         }

@@ -11,7 +11,7 @@ namespace Kitty.DB
     {
         public DbSet<Location> locations { get; set; }
 
-        public LocationDbContext():base("DefaultConnection")
+        public LocationDbContext():base("KittyConnection")
         {
 
         }

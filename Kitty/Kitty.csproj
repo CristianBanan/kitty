@@ -111,6 +111,7 @@
     <Compile Include="DB\LocationDbContext.cs" />
     <Compile Include="DB\OfficeDbContext.cs" />
     <Compile Include="Reader\JsonLocationReader.cs" />
+    <Compile Include="Repositories\LocationRepository.cs" />
     <Compile Include="Tools\BusinessTripFormatterServiceLocator.cs" />
     <Compile Include="Tools\Email.cs" />
     <Compile Include="Employee.cs" />

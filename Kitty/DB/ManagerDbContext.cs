@@ -12,7 +12,7 @@ namespace Kitty.DB
     {
         public DbSet<Manager> managers { get; set; }
 
-        public ManagerDbContext() : base("DefaultConnection")
+        public ManagerDbContext() : base("KittyConnection")
         {
 
         }
